@@ -162,15 +162,15 @@ void FocusChain::moveAfterWindowInChain(Window *window, Window *reference, Chain
     if (Window::belongToSameApplication(reference, window)) {
         chain.removeAll(window);
         chain.insert(chain.indexOf(reference), window);
-    } else {
-        chain.removeAll(window);
-        for (int i = chain.size() - 1; i >= 0; --i) {
-            if (Window::belongToSameApplication(reference, chain.at(i))) {
-                chain.insert(i, window);
-                break;
-            }
-        }
-    }
+    } // else {
+      //  chain.removeAll(window);
+      //  for (int i = chain.size() - 1; i >= 0; --i) {
+      //      if (Window::belongToSameApplication(reference, chain.at(i))) {
+    //          chain.insert(i, window);
+    //        break;
+    //   }
+    // }
+    //}
 }
 
 Window *FocusChain::firstMostRecentlyUsed() const
@@ -232,8 +232,8 @@ void FocusChain::makeLastInChain(Window *window, Chain &chain)
     if (window->isDeleted()) {
         return;
     }
-    chain.removeAll(window);
-    chain.prepend(window);
+    // chain.removeAll(window);
+    // chain.prepend(window);
 }
 
 bool FocusChain::contains(Window *window, VirtualDesktop *desktop) const
