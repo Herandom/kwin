@@ -223,8 +223,8 @@ void FocusChain::makeFirstInChain(Window *window, Chain &chain)
     if (window->isDeleted()) {
         return;
     }
-    chain.removeAll(window);
-    chain.append(window);
+   // chain.removeAll(window);
+    //chain.append(window);
 }
 
 void FocusChain::makeLastInChain(Window *window, Chain &chain)
