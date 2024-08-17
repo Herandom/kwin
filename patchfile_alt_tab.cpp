@@ -1,4 +1,5 @@
 // Here is the needed patch to Kwin to achieve this, build your version then use /usr/local/bin/kwin_x11 --replace to test it.
+// https://github.com/Intika-Linux-KDE/kwin-classic-ctrl-tab-switcher/commit/47d6ab59eb8914ddb0857382f2d42dff8bb11402
 void FocusChain::makeFirstInChain(AbstractClient *client, Chain &chain)
 {
     chain.removeAll(client);
