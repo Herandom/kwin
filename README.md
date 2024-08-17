@@ -1,4 +1,5 @@
-# Note: for keeping a patching the alt-tab stuff
+# Note: for patching the alt-tab stuff
+Created a fork incase I mess up the build stage and refreshes from source.
 
 # KWin
 
